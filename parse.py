@@ -12,6 +12,7 @@ outwriter = []
 def formatinfobuffer(str):
     infobuffer=str.replace('\n', '\\n').replace('\r', '\\r')
     infobuffer=str.replace('* Denotes check numbers out of sequence', '')
+    infobuffer=str.replace('REPORT ANY FRADULENT TRANSACTIONS', '')
     infobuffer=re.sub(' +',' ',infobuffer)
     infobuffer=infobuffer.strip()
     return infobuffer
